@@ -11,12 +11,14 @@ def removeFooters(text):
 
 	text = (re.sub(findURL, '', text))
 
-	return text #no, YOU deal with this 
+	return text #no, YOU deal with this
+
+
 
 def removeHeaders(text):
-	findBlockA = re.compile('^(SIUE ARCHIVES)(\n|.)*([A-Z][0-9]{2}:( )?[0-9]{2})$', re.I)
+	findBlockA = re.compile('(SIUE ARCHIVES)(\n|.){1,750}([A-Z][0-9]{2}:( )?[0-9]{2})', re.I)
 	print("first compiled")
-	findBlockB = re.compile('^(SIUE ARCHIVES)(\n|.)*(Box\/Folder Description)$', re.I) #returns any block going from SIUE ARCHIVES to B/F D
+	findBlockB = re.compile('(SIUE ARCHIVES)(\n|.){1,750}(Box\/Folder Description)', re.I) #returns any block going from SIUE ARCHIVES to B/F D
 	print("last compiled")
 	#I used 2 blocks to ensure BOTH cases get got, because there is SIGNIFICANT overlap and I don't trust python's regex engine
 
@@ -24,9 +26,12 @@ def removeHeaders(text):
 	print("first subbed")
 	text = (re.sub(findBlockA, '', text))
 	print("last subbed")
-	text.replace("\n\n\n","")
+	text = re.sub("\n\n \n\n","\n",text)
 	return text #no, YOU deal with this
 
 #MAIN
 out = (removeHeaders(removeFooters(open("out.txt","r").read())))
 open("out.txt","w").write(out)
+if "\n\n \n" in out:
+	print("out")
+
