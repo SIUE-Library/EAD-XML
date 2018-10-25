@@ -17,11 +17,9 @@ Hashmap of Box/Folder->Description
 
 The Hashmap is the difficult part as the rest can be lifted from omeka
 
-
 I'm trying to distinguish between multi-line descriptions and headers
 
 \n(\d+ ?\/ ?\d+) ?((—|-)\d+)?.*
-
 '''
 
 
@@ -30,9 +28,10 @@ I'm trying to distinguish between multi-line descriptions and headers
 	#for each page
 		#for each line
 			#if line fits regex
-				#
+
 
 import pyslibtesseract
 
 tesseract_config = pyslibtesseract.TesseractConfig(psm=pyslibtesseract.PageSegMode.PSM_SINGLE_LINE, hocr=True)
 print(pyslibtesseract.LibTesseract.simple_read(tesseract_config, '4-0.png'))
+

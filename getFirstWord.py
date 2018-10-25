@@ -2,7 +2,7 @@
 Looks at a hOCR file in TSV format and identifies any blank lines in the middle of the document
 '''
 import csv, io, json
-
+convertedFile = open("out.txt", "a")
 
 class Word:
 	def __init__(self, top, left, word):
@@ -42,7 +42,6 @@ tab = csv.DictReader(io.StringIO(open("html.tsv", "r").read()), delimiter="\t")
 
 listOfWords = []
 
-
 with open('html.tsv', 'r') as csvfile:
 	spamreader = csv.reader(csvfile, delimiter='\t', quotechar='|')
 	for row in spamreader:
@@ -66,7 +65,12 @@ for w in listOfWords:
 			thisLine = []
 			thisLine.append(w)
 
-for i in range(0, len(allLines)-1):
-	print(str(allLines[i]))
-	if(allLines[i+1].top - allLines[i].top > 80):
+for i in range(1, len(allLines)):
+	if(allLines[i].top - allLines[i-1].top > 80):
 		print("")
+		convertedFile.write("\n")
+	print(str(allLines[i]))
+	convertedFile.write(str(allLines[i])+"\n")
+
+
+
