@@ -67,9 +67,7 @@ for w in listOfWords:
 
 for i in range(1, len(allLines)):
 	if(allLines[i].top - allLines[i-1].top > 80):
-		print("")
 		convertedFile.write("\n")
-	print(str(allLines[i]))
 	convertedFile.write(str(allLines[i])+"\n")
 
 
