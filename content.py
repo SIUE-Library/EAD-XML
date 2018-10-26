@@ -19,7 +19,8 @@ The Hashmap is the difficult part as the rest can be lifted from omeka
 
 I'm trying to distinguish between multi-line descriptions and headers
 
-\n(\d+ ?\/ ?\d+) ?((—|-)\d+)?.*
+it is a new item if it matches the following regex:
+^(\d+ ?\/ ?\d+) ?((—|-)\d+)?.*
 
 note: add
 -c tosp_min_sane_kn_sp=8.5
@@ -40,15 +41,38 @@ class folder():
 		this.collection = col
 
 
-#for each pdf	
-	#convert to pages
-	#for each page
-		#for each line
-			#if line fits regex
+#for every line in out.txt there are 3 cases:
+#it begins with #/# in which case this is a NEW item!
+#else, it is blank.
+#else, it is a header or continuation of a line
+#	if the line above is blank, its a header
+#	else its a continuation of a line
+
+import re
+pat = re.compile("^(\d+ ?\/ ?\d+) ?((—|-)\d+)?.*", re.M|re.I)
+out = open("out.txt", "r")
+last = ""
+next = ""
+flag = 0
+items = []
+cat = ""
+for line in out:
 
 
-import pyslibtesseract
+	if len(re.findall(pat, line)) > 0:
+		print(next)
+		next = line[:-1]
 
-tesseract_config = pyslibtesseract.TesseractConfig(psm=pyslibtesseract.PageSegMode.PSM_SINGLE_LINE, hocr=True)
-print(pyslibtesseract.LibTesseract.simple_read(tesseract_config, '4-0.png'))
+	elif line != "\n" and line != " \n" and last != "\n" and last != " \n":
+		next += line[:-1]
+	elif line != "\n" and line != " \n" and (last == "\n" or last == " \n"):
+		print(next)
+		next = ""
+		print('\n'+line[:-1], end='')
+
+	last = line
+
+print(next)
+
+
 

@@ -1,6 +1,7 @@
 '''
 Looks at a hOCR file in TSV format and identifies any blank lines in the middle of the document
 '''
+
 import csv, io, json
 convertedFile = open("out.txt", "a")
 
