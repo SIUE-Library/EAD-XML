@@ -68,11 +68,9 @@ for line in out:
 	elif line != "\n" and line != " \n" and (last == "\n" or last == " \n"):
 		print(next)
 		next = ""
-		print('\n'+line[:-1], end='')
+		print('\n'+"**"+line[:-1]+"**", end='')
 
 	last = line
 
 print(next)
-
-
 

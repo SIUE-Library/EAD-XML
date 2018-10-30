@@ -10,7 +10,7 @@ to generate files for all pngs in current folder
 
 import re
 def removeFooters(text):
-	findURL = re.compile(r'.*[A-Z]:\\.*\n') #returns  and line that has a file location
+	findURL = re.compile('.*[A-Z]:\\.*\n', re.I) #returns  and line that has a file location
 
 	text = (re.sub(findURL, '', text))
 
@@ -19,9 +19,9 @@ def removeFooters(text):
 
 
 def removeHeaders(text):
-	findBlockA = re.compile('((UNIVERSITY)|(SIUE) ARCHIVES)(\n|.){1,750}Acc.{0,4}([A-Z][0-9]{1,2}:( )?[0-9]{1,2})', re.I)
+	findBlockA = re.compile('((UNIVERSITY)|(SIUE) ARCHIVES)(\n|.){1,750}Acc.{0,4}([A-Z]{0,1}[0-9]{1,2}:( )?[0-9]{1,2})', re.I)
 
-	findBlockB = re.compile('((UNIVERSITY)|(SIUE) ARCHIVES)(\n|.){1,750}(Box\/Folder (Descri(p|g)tion|mm))', re.I) #returns any block going from SIUE ARCHIVES to B/F D
+	findBlockB = re.compile('((UNIVERSITY)|(SIUE) ARCHIVES)(\n|.){1,750}((Box\/Folder)|(m?) (Descri(p|g)tion|mm))', re.I) #returns any block going from SIUE ARCHIVES to B/F D
 
 	#I used 2 blocks to ensure BOTH cases get got, because there is SIGNIFICANT overlap and I don't trust python's regex engine
 
@@ -31,6 +31,10 @@ def removeHeaders(text):
 
 	text = re.sub("\n\n \n\n","\n",text)
 	return text #no, YOU deal with this
+
+#def convertText(text):
+	#when there's an instance like "Apri15 this should be percieved as "April 25".
+	#if we see a series of consecutive letters followed by a "1[0-9]*" replace with "l [0-9]*"
 
 #MAIN
 out = (removeHeaders(removeFooters(open("out.txt","r").read())))
