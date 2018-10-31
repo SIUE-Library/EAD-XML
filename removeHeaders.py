@@ -32,10 +32,16 @@ def removeHeaders(text):
 	text = re.sub("\n\n \n\n","\n",text)
 	return text #no, YOU deal with this
 
-#def convertText(text):
-	#when there's an instance like "Apri15 this should be percieved as "April 25".
+def convertText(text):
+	#when there's an instance like "Apri15 this should be percieved as "April 5".
 	#if we see a series of consecutive letters followed by a "1[0-9]*" replace with "l [0-9]*"
+	old = re.compile("[A-Z]{3,8}1[0-9]*", re.I)
+	#find all instaces of old pattern
+	for match in re.findall(old, text):
+		text = text.replace(match, match.replace("1", "l ", 1))
 
+	return text
 #MAIN
-out = (removeHeaders(removeFooters(open("out.txt","r").read())))
+
+out = convertText(removeHeaders(removeFooters(open("out.txt","r").read())))
 open("out.txt","w").write(out)
