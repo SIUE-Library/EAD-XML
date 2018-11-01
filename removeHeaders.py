@@ -10,7 +10,7 @@ to generate files for all pngs in current folder
 
 import re
 def removeFooters(text):
-	findURL = re.compile('.*[A-Z]:\\.*\n', re.I) #returns  and line that has a file location
+	findURL = re.compile('Y:\\\.*$', re.M) #returns  and line that has a file location
 
 	text = (re.sub(findURL, '', text))
 
