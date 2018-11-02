@@ -2,12 +2,14 @@
 Looks at a hOCR file in TSV format and identifies any blank lines in the middle of the document
 '''
 
+import sys
 import csv, io, json
-convertedFile = open("out.txt", "a")
+convertedFile = open(sys.argv[1]+".txt", "a")
 
 class Word:
-	def __init__(self, top, left, word):
+	def __init__(self, top, left, word, width):
 		self.top = top
+		self.width = width
 		self.left = left
 		self.word = word
 
@@ -20,7 +22,7 @@ class Word:
 			return self.top < other.top
 
 	def __str__(self):
-		return self.word +" "
+		return self.word
 
 class Line:
 	def __init__(self, wordList, top):
@@ -29,12 +31,15 @@ class Line:
 
 	def __str__(self):
 		out = ""
-		for st in self.wordList:
-			out += str(st)
+		for st in range(0, len(self.wordList)):
+
+			if (self.wordList[st]).left - (self.wordList[st-1].left + self.wordList[st-1].width) > 10 :
+				out += " "
+			out += str(self.wordList[st])
 
 		return out
 def toint(input):
-	if input == 'top' or input == 'left':
+	if input == 'top' or input == 'left' or input == 'width':
 		return 0
 	else:
 		return int(input)
@@ -47,7 +52,7 @@ with open('html.tsv', 'r') as csvfile:
 	spamreader = csv.reader(csvfile, delimiter='\t', quotechar='|')
 	for row in spamreader:
 		if row[10] != "-1":
-			listOfWords.append( Word( toint(row[7]), toint(row[6]), row[11] ) )
+			listOfWords.append( Word( toint(row[7]), toint(row[6]), row[11], toint(row[8]) ) )
 
 listOfWords = sorted(listOfWords)
 
@@ -67,7 +72,7 @@ for w in listOfWords:
 			thisLine.append(w)
 
 for i in range(1, len(allLines)):
-	if(allLines[i].top - allLines[i-1].top > 80):
+	if(allLines[i].top - allLines[i-1].top > 85):
 		convertedFile.write("\n")
 	convertedFile.write(str(allLines[i])+"\n")
 

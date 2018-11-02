@@ -8,7 +8,7 @@ for file in *.png ; do tesseract $file $file -c tosp_min_sane_kn_sp=8.5 tsv; don
 to generate files for all pngs in current folder
 '''
 
-import re
+import re, sys
 def removeFooters(text):
 	findURL = re.compile('Y:\\\.*$', re.M) #returns  and line that has a file location
 
@@ -30,6 +30,7 @@ def removeHeaders(text):
 	text = (re.sub(findBlockA, '', text))
 
 	text = re.sub("\n\n \n\n","\n",text)
+	text = re.sub("\n\n\n\n", "\n", text)
 	return text #no, YOU deal with this
 
 def convertText(text):
@@ -43,5 +44,5 @@ def convertText(text):
 	return text
 #MAIN
 
-out = convertText(removeHeaders(removeFooters(open("out.txt","r").read())))
-open("out.txt","w").write(out)
+out = convertText(removeHeaders(removeFooters(open(sys.argv[1]+".txt","r").read())))
+open(sys.argv[1]+".txt","w").write(out)

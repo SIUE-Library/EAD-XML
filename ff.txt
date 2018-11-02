@@ -1,88 +1,90 @@
 
- 
 
-RG 100-1 
 
-1 Student Records A—Bo 
+RG 100-1
 
-2 Student Records Br-Cz 
+1 Student Records A-Bo
 
-3 Student Records D—F 
+2 Student Records Br-Cz
 
-4 Student Records G—Hi 
+3 Student Records D-F
 
-5 Student Records Ho-K 
+4 Student Records G-Hi
 
-6 Student Records L-Me 
+5 Student Records Ho-K
 
-7 Student Records Mi-P 
+6 Student Records L-Me
 
-8 Student Records Q-Sh 
+7 Student Records Mi-P
 
-9 Student Records Si-U 
+8 Student Records Q-Sh
 
-10 Student Records V-Z 
+9 Student Records Si-U
 
-RG 100-2 
+10 Student Records V-Z
 
-11 Instructor’s Grade Reports 1908-1924 
+RG 100-2
 
-12 Instructor’s Grade Reports 1924-25 — 1933 
+11 Instructor’s Grade Reports 1908-1924
 
-13 Instructor’s Grade Reports 1935-36 — 1942 
+12 Instructor’s Grade Reports 1924-25 — 1933
 
-14 Instructor’s Grade Reports 1943-1950 
+13 Instructor’s Grade Reports 1935-36 — 1942
 
-15 Instructor’s Grade Reports 1950-1955 
+14 Instructor’s Grade Reports 1943-1950
 
-RG 100 
+15 Instructor’s Grade Reports 1950-1955
 
-16/1 Shurtleff College Banner 
-16/2 Shurtleff College Chapter, AAUP 
-16/3 Papers of Mu Delta Rho: Shurtleff College Honor Society 
-16/4 The History of Mu Delta Rho: Notebook 
-16/5 Final Commencement Program, 1957 (3 copies) 
-16/6 Miscellaneous Documents, 1940- 
-Letterhead, Commencement— 1 944, Student Handbook- 1948-49, 
-Evidence of Enrollment Difﬁculties 
-16/7 Shurtleff Records: Library Budget—1949, Library Report—1951-May 1956 
-16/8 Shurtleff Records: Library Budget—1943-1944 
-16/9 Shurtleff Records: Library Budget, 1955 
+RG 100
 
-16/10 Correspondence regarding Shurtleff College Campus as SIU Alton Residence 
-Center, 1956-57 
-16/11 Origin of Name, End of Operations 
-16/ 12 Student Record Book, 1875-1876 — 1889-1899 
-16/13 Shurtleff Academy: Records of Students, 1895-1899 
-16/14 Shurtleff Academy: Records of Students, 1899-1904 
-16/ 15 Student Records: Notebook, c.1904—1919 
-16/16 Women’s Athletic Record Book, 1922-1923 
-16/ 17 Alumni Dinner Program, 1927; 100111 Anniversary of Shurtleff 
-16/18 Shurtleff College Drama Club, 1929-1930; 1930-1931 
-16/19 Records of Scholastic Scholarships Awarded, 1936-1942 
-16/20 Student Body Record Minutes, 1940-44 
-16/21 Student Body Financial Records 
-16/22 Student Council Minutes, 1944 
-16/23 Class of 1947 Record 
-16/24 Alpha Psi Omega 
+16/1 Shurtleff College Banner
+16/2 Shurtleff College Chapter, AAUP
+16/3 Papers ofMu Delta Rho: Shurtleff College Honor Society
+16/4 The History ofMu Delta Rho: Notebook
+16/5 Final Commencement Program, 1957 (3 copies)
+16/6 Miscellaneous Documents, 1940-
+Letterhead, C0mmencement-1944, Student Handbook—1948-49,
+Evidence ofEnrollment Difﬁculties
+16/7 Shurtleff Records: Library Budget-1949, Library Report-1951-May 1956
+16/8 Shurtleff Records: Library Budget—1943-1944
+16/9 Shurtleff Records: Library Budget, 1955
 
-17/1 Library — Ledger — Budget 1956 
-17/2 Library — Ledger — Budget 1954-55 
-17/3 Library — Ledger — Budget 1953-54 
-17/4 Library — Ledger — Budget 1952-53 
-17/5 Library — Ledger — Budget 1948-49 
-17/6 Library — Ledger — Budget 1947-48 
-17/7 Library — Ledger — Budget 1946-47 
-17/8 Library — Ledger — Budget 1943-44 
-17/9 Copy — Journal of John Mason Peck 1855-1857 
-17/ 10 A Classified Catalogue of the Library of Shurtleff College with an alphabetical 
-index compiled by E. Whitney 1862 
-17/11 Catalogue of the Library of Shurtleff College February 1859-1881 
-17/ 12 Shurtleff College Library — Circulation Statistics — Classiﬁed September 1923- 
-October 1950 
 
-BOUND JOURNALS — RG 100-2 
+16/10 Correspondence regarding Shurtleff College Campus as SIU Alton Residence
+Center, 1956-57
+16/11 Origin ofName, End of Operations
+16/12 Student Record Book, 1875-1876 — 1889-1899
+16/13 Shurtleff Academy: Records of Students, 1895-1899
+16/14 Shurtleff Academy: Records of Students, 1899-1904
+16/15 Student Records: Notebook, c.1904-1919
+16/16 Women’s Athletic Record Book, 1922-1923
+16/17 Alumni Dinner Program, 1927; 100th Anniversary of Shurtleff
+16/18 Shurtleff College Drama Club, 1929-1930; 1930-1931
+16/19 Records of Scholastic Scholarships Awarded, 1936-1942
+16/20 Student Body Record Minutes, 1940-44
+16/21 Student Body Financial Records
+16/22 Student Council Minutes, 1944
+16/23 Class of 1947 Record
+16/24 Alpha Psi Omega
 
-1/2 Registrar’ 5 Grade Book 1855-1892 
-2/2 Registrar’s Grade Book 1892-1918 
+17/1 Library — Ledger — Budget 1956
+17/2 Library — Ledger — Budget 1954-55
+17/3 Library — Ledger — Budget 1953-54
+17/4 Library — Ledger — Budget 1952-53
+17/5 Library — Ledger — Budget 1948-49
+17/6 Library — Ledger — Budget 1947-48
+17/7 Library — Ledger — Budget 1946-47
+17/8 Library — Ledger — Budget 1943-44
+17/9 Copy — Journal ofJohn Mason Peck 1855-1857
+17/10 A Classiﬁed Catalogue ofthe Library of Shurtleff College with an alphabetical
+index compiled by E. Whitney 1862
+17/11 Catalogue ofthe Library of Shurtleff College February 1859-1881
+17/12 Shurtleff College Library — Circulation Statistics — Classiﬁed September 1923-
+October 1950
+
+BOUND JOURNALS — RG 100-2
+
+1/2 Registrar’s Grade Book 1855-1892
+2/2 Registrar’s Grade Book 1892-1918
+
 
