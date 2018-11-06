@@ -2,11 +2,10 @@
 Convert internal archival finding aids to standardized XML format
 
 Usage:Run
-loadTsv.sh
-passing it the name of a folder containing tsv files for hocr data (non tsv files in the folder will be ignored)
-
+runAll.sh
+Which looks in all folders in directory with pdf's in them and processes those pdf's, putting output in <folder name>.txt in currect directory
 <br>
 
-Sections that will have to be done by hand:
-Prose lists
+Sections that will have to be done by hand:<br>
+Prose lists<br>
 Lists that beging with single numbers instead of box/folders
